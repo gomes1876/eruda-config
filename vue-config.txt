@@ -1,0 +1,21 @@
+Instale usando NPM ou yarn
+  https://www.npmjs.com/package/eruda - npm i eruda
+  https://yarnpkg.com/package/eruda - yarn add eruda
+  
+Edite seu .env colocando a variável NODE_ENV=develop
+
+Adicione o seguinte código ao seu arquivo de entrada (geralmente main.js):
+
+import('eruda').then((module) => {
+  const eruda = module.default;
+  eruda.init();
+});
+
+Adicione a seguinte condição para iniciar o Eruda somente quando a aplicação estiver em um dispositivo móvel:
+
+if (window.innerWidth <= 768) { // exemplo de tamanho de tela para dispositivos móveis
+  import('eruda')
+    .then(({ default: eruda }) => {
+      eruda.init();
+    });
+}
