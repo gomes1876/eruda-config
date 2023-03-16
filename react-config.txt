@@ -2,6 +2,8 @@ Instale usando NPM ou yarn
   https://www.npmjs.com/package/eruda - npm i eruda
   https://yarnpkg.com/package/eruda - yarn add eruda
   
+Edite seu .env colocando a variável NODE_ENV=develop
+
 Inicialize o eruda no seu arquivo de entrada da aplicação (geralmente App.js ou App.tsx)
 import eruda from 'eruda';
 
